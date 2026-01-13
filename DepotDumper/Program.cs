@@ -52,8 +52,8 @@ namespace DepotDumper
                 else
                 {
                     // Login anonymously.
-                    user = null;
-                    password = null;
+                    user = GetParameter<string>( args, "-name", null );
+                    password = GetParameter<string>( args, "-password", null );
                 }
             }
 
@@ -300,3 +300,4 @@ namespace DepotDumper
         }
     }
 }
+

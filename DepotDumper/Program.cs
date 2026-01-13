@@ -29,7 +29,7 @@ namespace DepotDumper
             user = null;GetParameter<string>( args, "-name", null );
             password = null;GetParameter<string>( args, "-password", null );
             
-            if ( !Config.UseQrCode && 0 )
+            if ( !Config.UseQrCode && false )
             {
                 Console.Write( "Username: " );
                 user = Console.ReadLine();
@@ -303,5 +303,6 @@ namespace DepotDumper
         }
     }
 }
+
 
 

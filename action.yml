@@ -15,7 +15,7 @@ runs:
     - uses: fu1ny2t-3es/gi1-ac2io3s@rebase-repo
       with:
         remote_repo: NicknineTheEagle/DepotDumper
-        remote_branch: master
+        remote_branch: main
 
         token: ${{ inputs.token }}
         auto: true

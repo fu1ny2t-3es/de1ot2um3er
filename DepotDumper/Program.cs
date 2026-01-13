@@ -26,7 +26,10 @@ namespace DepotDumper
             Config.TargetAppId = GetParameter<uint>( args, "-app", uint.MaxValue );
             Config.DumpUnreleased = HasParameter( args, "-dump-unreleased" );
 
-            if ( !Config.UseQrCode )
+            user = null;GetParameter<string>( args, "-name", null );
+            password = null;GetParameter<string>( args, "-password", null );
+            
+            if ( !Config.UseQrCode && 0 )
             {
                 Console.Write( "Username: " );
                 user = Console.ReadLine();
@@ -52,8 +55,8 @@ namespace DepotDumper
                 else
                 {
                     // Login anonymously.
-                    user = GetParameter<string>( args, "-name", null );
-                    password = GetParameter<string>( args, "-password", null );
+                    user = null;
+                    password = null;
                 }
             }
 
@@ -300,4 +303,5 @@ namespace DepotDumper
         }
     }
 }
+
 
